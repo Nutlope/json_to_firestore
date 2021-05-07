@@ -14,17 +14,15 @@ fs.readdir(directoryPath, function (err, files) {
   if (err) {
     return console.log("Unable to scan directory: " + err);
   }
-
   files.forEach(function (file) {
     var lastDotIndex = file.lastIndexOf(".");
     var menu = require("./files/" + file);
-
     menu.forEach(function (obj) {
       firestore
         .collection(file.substring(0, lastDotIndex))
-        .doc(obj.id)
+        .doc(obj.name)
         .set(obj)
-        .then(function (docRef) {
+        .then(function () {
           console.log("Document written");
         })
         .catch(function (error) {

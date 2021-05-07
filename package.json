@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^8.4.2",
-    "firebase-admin": "^9.6.0"
+    "firebase": "^8.5.0",
+    "firebase-admin": "^9.7.0"
   }
 }
