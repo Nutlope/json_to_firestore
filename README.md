@@ -6,7 +6,7 @@ A script that turns a JSON file (array of objects) into a FireStore collection.
 
 1. Download service_key from firebase and place it in the root directory
 2. Create a folder named "files" and put all JSON files there in the form of an array of objects
-3. Specify the unique ID in L25 of uploader.js
+3. Specify the unique ID in L25 of uploader.js. If JSON files have diff unique IDs, do them one by one.
 4. Run "npm install firebase firebase-admin"
 5. Run "node uploader.js"
 

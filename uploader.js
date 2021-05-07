@@ -18,11 +18,12 @@ fs.readdir(directoryPath, function (err, files) {
     var lastDotIndex = file.lastIndexOf(".");
     var menu = require("./files/" + file);
     menu.forEach(function (obj) {
+      console.log("obj is", obj);
       firestore
         .collection(file.substring(0, lastDotIndex))
-        .doc(obj.name)
+        .doc(obj.ResponseId)
         .set(obj)
-        .then(function () {
+        .then(function (docthing) {
           console.log("Document written");
         })
         .catch(function (error) {
